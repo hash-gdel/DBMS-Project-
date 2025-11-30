@@ -1,8 +1,34 @@
 # DBMS-Project-
 Databases Management System Project 
 
+This is a hospital management web application for MNHS. It allows managing patients, appointments, medications, and staff workload. The app is built with Python (Flask) for the backend and HTML/CSS/JS for the frontend.
 
-This project is a teamwork based project that focuses on building the Database Management System for the Moroccan National Health Services . Through the deliverable , we design the conceptual Schema to model the different entities and relationships involved in managing  the Health Service . We seek to guarantee accurate data organization, efficient access to information , and ensure query handling . The project will highlight a real-world use case application of DBMS ,improving the healthcare system through good data handling . 
+
+Setup and Installation
+1.	Clone the repository:
+git clone https://github.com/hash-gdel/DBMS-Project.git
+cd MNHS-APP
+2.	Create a virtual environment:
+python -m venv venv
+source venv/bin/activate (Linux / macOS)
+venv\Scripts\activate (Windows)
+3.	Install dependencies:
+pip install flask mysql-connector-python python-dotenv
+4.	Set up environment variables by creating a .env file in the root with:
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_DB=lab3
+MYSQL_USER=mnhs_user
+MYSQL_PASSWORD=MNHS123
+5.	Prepare the database. Make sure MySQL is running, then run:
+CREATE DATABASE IF NOT EXISTS lab3;
+CREATE USER 'mnhs_user'@'localhost' IDENTIFIED BY 'MNHS123’';
+GRANT ALL PRIVILEGES ON lab3.* TO 'mnhs_user'@'localhost';
+FLUSH PRIVILEGES;
+
+
+Running the App
+python3  app.py
 
 
 
